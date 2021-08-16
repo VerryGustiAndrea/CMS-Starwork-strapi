@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "starwoks_news",
+  "info": {
+    "name": "StarwoksNews",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "shortTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "starworks_news_category": {
+      "model": "starworks-news-category",
+      "via": "starwoks_news"
+    }
+  }
+}

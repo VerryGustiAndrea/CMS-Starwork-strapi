@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "star_pedia_categories",
+  "info": {
+    "name": "StarPediaCategory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CategoryName": {
+      "type": "string",
+      "required": true
+    },
+    "star_pedias": {
+      "via": "star_pedia_category",
+      "collection": "star-pedia"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "star_pedias",
+  "info": {
+    "name": "starPedia",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "shortDescription": {
+      "type": "text",
+      "required": true
+    },
+    "publishedDate": {
+      "type": "date",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Normal",
+        "Featured",
+        "All"
+      ],
+      "required": true
+    },
+    "readingEstimationTime": {
+      "type": "integer",
+      "required": true
+    },
+    "star_pedia_category": {
+      "model": "star-pedia-category",
+      "via": "star_pedias"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

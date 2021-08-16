@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "starworks_news_categories",
+  "info": {
+    "name": "StarworksNewsCategory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categoryName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "starwoks_news": {
+      "via": "starworks_news_category",
+      "collection": "starwoks-news"
+    }
+  }
+}

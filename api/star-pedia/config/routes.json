@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/star-pedias",
+      "handler": "star-pedia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/star-pedias/count",
+      "handler": "star-pedia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/star-pedias/:id",
+      "handler": "star-pedia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/star-pedias",
+      "handler": "star-pedia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/star-pedias/:id",
+      "handler": "star-pedia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/star-pedias/:id",
+      "handler": "star-pedia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
