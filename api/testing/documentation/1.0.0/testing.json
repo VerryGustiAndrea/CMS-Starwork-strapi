@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/restaurants": {
+    "/testings": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Restaurant"
+                    "$ref": "#/components/schemas/Testing"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Restaurant"
+          "Testing"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Restaurant"
+                  "$ref": "#/components/schemas/Testing"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Restaurant"
+          "Testing"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRestaurant"
+                "$ref": "#/components/schemas/NewTesting"
               }
             }
           }
         }
       }
     },
-    "/restaurants/count": {
+    "/testings/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Restaurant"
+          "Testing"
         ],
         "parameters": []
       }
     },
-    "/restaurants/{id}": {
+    "/testings/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Restaurant"
+                  "$ref": "#/components/schemas/Testing"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Restaurant"
+          "Testing"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Restaurant"
+                  "$ref": "#/components/schemas/Testing"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Restaurant"
+          "Testing"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRestaurant"
+                "$ref": "#/components/schemas/NewTesting"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Restaurant"
+          "Testing"
         ],
         "parameters": [
           {
@@ -514,52 +514,17 @@
   },
   "components": {
     "schemas": {
-      "Restaurant": {
+      "Testing": {
         "required": [
           "id",
-          "name"
+          "cobacoba"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "cobacoba": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "restaurants": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -567,22 +532,13 @@
           }
         }
       },
-      "NewRestaurant": {
+      "NewTesting": {
         "required": [
-          "name"
+          "cobacoba"
         ],
         "properties": {
-          "name": {
+          "cobacoba": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -600,7 +556,7 @@
   },
   "tags": [
     {
-      "name": "Restaurant"
+      "name": "Testing"
     }
   ]
 }
