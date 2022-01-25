@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/starworks-news",
+      "handler": "starworks-news.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/starworks-news/count",
+      "handler": "starworks-news.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/starworks-news/:id",
+      "handler": "starworks-news.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/starworks-news",
+      "handler": "starworks-news.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/starworks-news/:id",
+      "handler": "starworks-news.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/starworks-news/:id",
+      "handler": "starworks-news.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

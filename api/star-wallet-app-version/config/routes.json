@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/star-wallet-app-versions",
+      "handler": "star-wallet-app-version.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/star-wallet-app-versions/count",
+      "handler": "star-wallet-app-version.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/star-wallet-app-versions/:id",
+      "handler": "star-wallet-app-version.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/star-wallet-app-versions",
+      "handler": "star-wallet-app-version.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/star-wallet-app-versions/:id",
+      "handler": "star-wallet-app-version.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/star-wallet-app-versions/:id",
+      "handler": "star-wallet-app-version.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

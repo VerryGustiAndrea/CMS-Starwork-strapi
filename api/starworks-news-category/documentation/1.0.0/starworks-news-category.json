@@ -539,13 +539,18 @@
           "categoryName": {
             "type": "string"
           },
-          "starwoks_news": {
+          "starworks_news": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "title",
-                "thumbnail"
+                "description",
+                "content",
+                "publishedDate",
+                "thumbnail",
+                "doc",
+                "slug"
               ],
               "properties": {
                 "id": {
@@ -554,19 +559,37 @@
                 "title": {
                   "type": "string"
                 },
-                "shortTitle": {
-                  "type": "string"
-                },
                 "description": {
                   "type": "string"
                 },
                 "content": {
                   "type": "string"
                 },
+                "publishedDate": {
+                  "type": "string"
+                },
                 "thumbnail": {
                   "type": "string"
                 },
                 "starworks_news_category": {
+                  "type": "string"
+                },
+                "doc": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "JSONLD": {
+                  "type": "string"
+                },
+                "metaTitle": {
+                  "type": "string"
+                },
+                "metaKeyword": {
+                  "type": "string"
+                },
+                "metaDescription": {
                   "type": "string"
                 },
                 "published_at": {
@@ -595,7 +618,7 @@
           "categoryName": {
             "type": "string"
           },
-          "starwoks_news": {
+          "starworks_news": {
             "type": "array",
             "items": {
               "type": "string"

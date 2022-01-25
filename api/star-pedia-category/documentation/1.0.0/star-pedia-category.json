@@ -550,7 +550,9 @@
                 "type",
                 "readingEstimationTime",
                 "thumbnail",
-                "content"
+                "content",
+                "slug",
+                "articleBanner"
               ],
               "properties": {
                 "id": {
@@ -583,6 +585,24 @@
                   "type": "string"
                 },
                 "content": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "JSONLD": {
+                  "type": "string"
+                },
+                "metaTitle": {
+                  "type": "string"
+                },
+                "metaKeyword": {
+                  "type": "string"
+                },
+                "metaDescription": {
+                  "type": "string"
+                },
+                "articleBanner": {
                   "type": "string"
                 },
                 "published_at": {

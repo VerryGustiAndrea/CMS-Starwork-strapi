@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "robots_txts",
+  "info": {
+    "name": "robots.txt",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "For": {
+      "type": "string"
+    },
+    "RobotsTxt": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/robots-txts",
+      "handler": "robots-txt.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/robots-txts/count",
+      "handler": "robots-txt.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/robots-txts/:id",
+      "handler": "robots-txt.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/robots-txts",
+      "handler": "robots-txt.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/robots-txts/:id",
+      "handler": "robots-txt.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/robots-txts/:id",
+      "handler": "robots-txt.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

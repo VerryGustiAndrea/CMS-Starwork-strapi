@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sitemaps",
+  "info": {
+    "name": "Sitemap",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "text"
+    }
+  }
+}

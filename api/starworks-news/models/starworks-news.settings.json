@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "starworks_news",
+  "info": {
+    "name": "Starworks News",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "unique": true
+    },
+    "publishedDate": {
+      "type": "date",
+      "required": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "starworks_news_category": {
+      "model": "starworks-news-category",
+      "via": "starworks_news"
+    },
+    "doc": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "JSONLD": {
+      "type": "text"
+    },
+    "metaTitle": {
+      "type": "text",
+      "maxLength": 70
+    },
+    "metaKeyword": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 320,
+      "minLength": 51
+    }
+  }
+}

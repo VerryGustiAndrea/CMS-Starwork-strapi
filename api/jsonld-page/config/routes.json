@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jsonld-pages",
+      "handler": "jsonld-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jsonld-pages/count",
+      "handler": "jsonld-page.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jsonld-pages/:id",
+      "handler": "jsonld-page.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/jsonld-pages",
+      "handler": "jsonld-page.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jsonld-pages/:id",
+      "handler": "jsonld-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jsonld-pages/:id",
+      "handler": "jsonld-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

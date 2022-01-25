@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "star_wallet_app_versions",
+  "info": {
+    "name": "StarWALLET App Version"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "android": {
+      "type": "string",
+      "required": true
+    },
+    "ios": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

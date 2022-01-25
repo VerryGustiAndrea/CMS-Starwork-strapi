@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jsonld_pages",
+  "info": {
+    "name": "SEO Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Path": {
+      "type": "string"
+    },
+    "JSONLD": {
+      "type": "text"
+    },
+    "MetaTitle": {
+      "type": "text",
+      "maxLength": 70
+    },
+    "MetaDescription": {
+      "type": "text",
+      "maxLength": 320,
+      "minLength": 51
+    },
+    "MetaKeywords": {
+      "type": "text"
+    },
+    "MetaImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "MetaRobot": {
+      "type": "string",
+      "default": "all"
+    }
+  }
+}

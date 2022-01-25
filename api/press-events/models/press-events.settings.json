@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "press_events",
+  "info": {
+    "name": "Press Events",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "postedDate": {
+      "type": "date",
+      "required": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "domain": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "text",
+      "required": true
+    },
+    "JSONLD": {
+      "type": "text"
+    }
+  }
+}

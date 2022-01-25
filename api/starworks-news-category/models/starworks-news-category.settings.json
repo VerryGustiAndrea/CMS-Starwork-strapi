@@ -16,9 +16,9 @@
       "required": true,
       "unique": true
     },
-    "starwoks_news": {
+    "starworks_news": {
       "via": "starworks_news_category",
-      "collection": "starwoks-news"
+      "collection": "starworks-news"
     }
   }
 }
