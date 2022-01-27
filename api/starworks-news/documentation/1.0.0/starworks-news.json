@@ -736,37 +736,6 @@
             "maxLength": 320,
             "minLength": 51
           },
-          "starworks_news_platfrom": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "platformName": {
-                "type": "string"
-              },
-              "platform": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "Author": {
-            "type": "string"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -815,12 +784,6 @@
             "type": "string",
             "maxLength": 320,
             "minLength": 51
-          },
-          "starworks_news_platfrom": {
-            "type": "string"
-          },
-          "Author": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",

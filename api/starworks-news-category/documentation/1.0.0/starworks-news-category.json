@@ -592,12 +592,6 @@
                 "metaDescription": {
                   "type": "string"
                 },
-                "starworks_news_platfrom": {
-                  "type": "string"
-                },
-                "Author": {
-                  "type": "string"
-                },
                 "published_at": {
                   "type": "string"
                 },

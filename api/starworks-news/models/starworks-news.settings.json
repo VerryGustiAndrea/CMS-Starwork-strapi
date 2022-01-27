@@ -75,13 +75,6 @@
       "type": "text",
       "maxLength": 320,
       "minLength": 51
-    },
-    "starworks_news_platfrom": {
-      "via": "platform",
-      "model": "starworks-news-platfrom"
-    },
-    "Author": {
-      "type": "string"
     }
   }
 }
