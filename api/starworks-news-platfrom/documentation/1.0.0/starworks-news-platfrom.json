@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/starworks-news-categories": {
+    "/starworks-news-platfroms": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Starworks-news-platfrom"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Starworks-news-platfrom"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStarworks-news-category"
+                "$ref": "#/components/schemas/NewStarworks-news-platfrom"
               }
             }
           }
         }
       }
     },
-    "/starworks-news-categories/count": {
+    "/starworks-news-platfroms/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Starworks-news-platfrom"
         ],
         "parameters": []
       }
     },
-    "/starworks-news-categories/{id}": {
+    "/starworks-news-platfroms/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Starworks-news-platfrom"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Starworks-news-platfrom"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStarworks-news-category"
+                "$ref": "#/components/schemas/NewStarworks-news-platfrom"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Starworks-news-platfrom"
         ],
         "parameters": [
           {
@@ -527,19 +527,18 @@
   },
   "components": {
     "schemas": {
-      "Starworks-news-category": {
+      "Starworks-news-platfrom": {
         "required": [
-          "id",
-          "categoryName"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "categoryName": {
+          "platformName": {
             "type": "string"
           },
-          "starworks_news": {
+          "platform": {
             "type": "array",
             "items": {
               "required": [
@@ -616,15 +615,12 @@
           }
         }
       },
-      "NewStarworks-news-category": {
-        "required": [
-          "categoryName"
-        ],
+      "NewStarworks-news-platfrom": {
         "properties": {
-          "categoryName": {
+          "platformName": {
             "type": "string"
           },
-          "starworks_news": {
+          "platform": {
             "type": "array",
             "items": {
               "type": "string"

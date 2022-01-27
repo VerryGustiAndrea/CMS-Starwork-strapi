@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "database_users",
+  "info": {
+    "name": "DatabaseUser"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "StarworksWebsite": {
+      "type": "boolean"
+    },
+    "Starwallet": {
+      "type": "boolean"
+    },
+    "Redruby": {
+      "type": "boolean"
+    },
+    "BIV": {
+      "type": "boolean"
+    }
+  }
+}

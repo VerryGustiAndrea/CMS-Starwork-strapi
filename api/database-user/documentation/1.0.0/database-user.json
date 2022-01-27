@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/starworks-news-categories": {
+    "/database-users": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Database-user"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Database-user"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStarworks-news-category"
+                "$ref": "#/components/schemas/NewDatabase-user"
               }
             }
           }
         }
       }
     },
-    "/starworks-news-categories/count": {
+    "/database-users/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Database-user"
         ],
         "parameters": []
       }
     },
-    "/starworks-news-categories/{id}": {
+    "/database-users/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Database-user"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Database-user"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStarworks-news-category"
+                "$ref": "#/components/schemas/NewDatabase-user"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Starworks-news-category"
+          "Database-user"
         ],
         "parameters": [
           {
@@ -527,88 +527,34 @@
   },
   "components": {
     "schemas": {
-      "Starworks-news-category": {
+      "Database-user": {
         "required": [
-          "id",
-          "categoryName"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "categoryName": {
+          "email": {
             "type": "string"
           },
-          "starworks_news": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "content",
-                "publishedDate",
-                "thumbnail",
-                "doc",
-                "slug"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "publishedDate": {
-                  "type": "string"
-                },
-                "thumbnail": {
-                  "type": "string"
-                },
-                "starworks_news_category": {
-                  "type": "string"
-                },
-                "doc": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "JSONLD": {
-                  "type": "string"
-                },
-                "metaTitle": {
-                  "type": "string"
-                },
-                "metaKeyword": {
-                  "type": "string"
-                },
-                "metaDescription": {
-                  "type": "string"
-                },
-                "starworks_news_platfrom": {
-                  "type": "string"
-                },
-                "Author": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "name": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "StarworksWebsite": {
+            "type": "boolean"
+          },
+          "Starwallet": {
+            "type": "boolean"
+          },
+          "Redruby": {
+            "type": "boolean"
+          },
+          "BIV": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -616,19 +562,28 @@
           }
         }
       },
-      "NewStarworks-news-category": {
-        "required": [
-          "categoryName"
-        ],
+      "NewDatabase-user": {
         "properties": {
-          "categoryName": {
+          "email": {
             "type": "string"
           },
-          "starworks_news": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "name": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "StarworksWebsite": {
+            "type": "boolean"
+          },
+          "Starwallet": {
+            "type": "boolean"
+          },
+          "Redruby": {
+            "type": "boolean"
+          },
+          "BIV": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
