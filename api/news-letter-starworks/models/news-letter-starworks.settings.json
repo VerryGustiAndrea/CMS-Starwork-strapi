@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_letters",
+  "info": {
+    "name": "News Letter",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "news_letter_category_id": {
+      "model": "news-letter-category",
+      "via": "news_letters"
+    }
+  }
+}

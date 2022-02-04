@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/database-users": {
+    "/news-letter-categories": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-category"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-category"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDatabase-user"
+                "$ref": "#/components/schemas/NewNews-letter-category"
               }
             }
           }
         }
       }
     },
-    "/database-users/count": {
+    "/news-letter-categories/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-category"
         ],
         "parameters": []
       }
     },
-    "/database-users/{id}": {
+    "/news-letter-categories/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-category"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-category"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDatabase-user"
+                "$ref": "#/components/schemas/NewNews-letter-category"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-category"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Database-user": {
+      "News-letter-category": {
         "required": [
           "id"
         ],
@@ -535,39 +535,40 @@
           "id": {
             "type": "string"
           },
-          "email": {
+          "website": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "phoneNumber": {
-            "type": "string"
-          },
-          "StarWORKS": {
-            "type": "boolean"
-          },
-          "StarTRAVELLER": {
-            "type": "boolean"
-          },
-          "Redruby": {
-            "type": "boolean"
-          },
-          "BIV": {
-            "type": "boolean"
-          },
-          "dob": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "domicile": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "OTHER": {
-            "type": "boolean"
+          "news_letters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "content"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "news_letter_category_id": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -575,41 +576,16 @@
           }
         }
       },
-      "NewDatabase-user": {
+      "NewNews-letter-category": {
         "properties": {
-          "email": {
+          "website": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "phoneNumber": {
-            "type": "string"
-          },
-          "StarWORKS": {
-            "type": "boolean"
-          },
-          "StarTRAVELLER": {
-            "type": "boolean"
-          },
-          "Redruby": {
-            "type": "boolean"
-          },
-          "BIV": {
-            "type": "boolean"
-          },
-          "dob": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "domicile": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "OTHER": {
-            "type": "boolean"
+          "news_letters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

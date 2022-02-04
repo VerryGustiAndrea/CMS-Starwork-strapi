@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/news-letter-starworks",
+      "handler": "news-letter-starworks.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/news-letter-starworks/count",
+      "handler": "news-letter-starworks.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/news-letter-starworks/:id",
+      "handler": "news-letter-starworks.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/news-letter-starworks",
+      "handler": "news-letter-starworks.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/news-letter-starworks/:id",
+      "handler": "news-letter-starworks.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/news-letter-starworks/:id",
+      "handler": "news-letter-starworks.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

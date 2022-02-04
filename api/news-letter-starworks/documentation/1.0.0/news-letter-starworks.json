@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/database-users": {
+    "/news-letter-starworks": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the news-letter-starworks's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve news-letter-starworks document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-starworks"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new news-letter-starworks record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve news-letter-starworks document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-starworks"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDatabase-user"
+                "$ref": "#/components/schemas/NewNews-letter-starworks"
               }
             }
           }
         }
       }
     },
-    "/database-users/count": {
+    "/news-letter-starworks/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of news-letter-starworks documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve news-letter-starworks document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-starworks"
         ],
         "parameters": []
       }
     },
-    "/database-users/{id}": {
+    "/news-letter-starworks/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one news-letter-starworks record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve news-letter-starworks document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-starworks"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single news-letter-starworks record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve news-letter-starworks document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-starworks"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDatabase-user"
+                "$ref": "#/components/schemas/NewNews-letter-starworks"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single news-letter-starworks record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single news-letter-starworks based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Database-user"
+          "News-letter-starworks"
         ],
         "parameters": [
           {
@@ -527,47 +527,48 @@
   },
   "components": {
     "schemas": {
-      "Database-user": {
+      "News-letter-starworks": {
         "required": [
-          "id"
+          "id",
+          "content"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "email": {
+          "subject": {
             "type": "string"
           },
-          "name": {
+          "content": {
             "type": "string"
           },
-          "phoneNumber": {
-            "type": "string"
-          },
-          "StarWORKS": {
-            "type": "boolean"
-          },
-          "StarTRAVELLER": {
-            "type": "boolean"
-          },
-          "Redruby": {
-            "type": "boolean"
-          },
-          "BIV": {
-            "type": "boolean"
-          },
-          "dob": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "domicile": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "OTHER": {
-            "type": "boolean"
+          "news_letter_category_id": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "news_letters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -575,41 +576,19 @@
           }
         }
       },
-      "NewDatabase-user": {
+      "NewNews-letter-starworks": {
+        "required": [
+          "content"
+        ],
         "properties": {
-          "email": {
+          "subject": {
             "type": "string"
           },
-          "name": {
+          "content": {
             "type": "string"
           },
-          "phoneNumber": {
+          "news_letter_category_id": {
             "type": "string"
-          },
-          "StarWORKS": {
-            "type": "boolean"
-          },
-          "StarTRAVELLER": {
-            "type": "boolean"
-          },
-          "Redruby": {
-            "type": "boolean"
-          },
-          "BIV": {
-            "type": "boolean"
-          },
-          "dob": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "domicile": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "OTHER": {
-            "type": "boolean"
           },
           "published_at": {
             "type": "string",

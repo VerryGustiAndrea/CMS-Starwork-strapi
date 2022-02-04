@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_letter_categories",
+  "info": {
+    "name": "News Letter Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "website": {
+      "type": "string"
+    },
+    "news_letters": {
+      "via": "news_letter_category_id",
+      "collection": "news-letter-starworks"
+    }
+  }
+}
