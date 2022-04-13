@@ -10,6 +10,7 @@ module.exports = ({ env }) => ({
         database: env('DATABASE_NAME', 'strapi'),
         username: env('DATABASE_USERNAME', 'starworks'),
         password: env('DATABASE_PASSWORD', 'generasioptimis'),
+	charset: 'utf8mb4'
       },
       options: {},
     },
